@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School fes</title>
+    <style>
+        body{
+            margin: 0 auto 0 auto;
+            margin-bottom: 0;
+            max-width: 1000px;
+            background-color: antiquewhite;
+        }
+        .mainphoto{
+            background-image: url('img/shwae-swtug-001.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: auto;
+            margin-top: 20px;
+            padding: 200px 0;
+            color: aquamarine;
+            
+        }
+        img{
+            height: auto;
+            width: 300px;
+        }
+        .photo{
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        .photo2{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-radius: 8px;
+        }
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7eff82;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none;
+            font-size: 18px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #f8bb6b;
+        } 
+        a {
+            color: #84ffd6;
+            font-size: 35px;
+            transition: all 0.3s ease;
+        }
+        a:hover {
+            color: #e74c3c;
+            transform: scale(1.7);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }  
+    </style>
+</head>
+<body>
+    <main>
+
+        
+        <h1 class="mainphoto"><a href="https://fes2024.tokyo-ec.net/"target="_blank">~'24 School Fes~</h1></a>
+        <div class="photo">
+            <div class="photo2">
+                    <div class="img1">
+                        <img src="img/IMG_8387.JPG" alt="poteto">
+                        <p>おいしいポテト</p>
+                    </div>
+                    <div class="img1">
+                        <img src="img/IMG_8386.JPG" alt="poteto">
+                        <p>たいやき</p>
+                    </div>
+                    <div class="img1">
+                        <img src="img/IMG_8394.jpg" alt="poteto">
+                        <p>クレープ</p>
+                    </div>
+                    <div class="img1">
+                        <img src="img/IMG_8393.JPG" alt="poteto">
+                        <p>サバゲー</p>
+                    </div>
+
+            </div>
+            <div style="height: 150px;"></div>
+
+              <button id="scrollToTopBtn" onclick="scrollToTop()">↑ 上に戻る</button>
+        <script>
+            window.onscroll = function() {
+                let button = document.getElementById("scrollToTopBtn");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+
+            function scrollToTop() {
+        
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        </script>
+    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7700174795445!2d139.71454457667951!3d35.731874227188875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d65dd3e2697%3A0x181a275ef6141c31!2z44CSMTcwLTAwMTMg5p2x5Lqs6YO96LGK5bO25Yy65p2x5rGg6KKL77yT5LiB55uu77yW4oiS77yRIOadseS6rOmbu-WtkOWwgumWgOWtpuagoQ!5e0!3m2!1sja!2sjp!4v1732866301426!5m2!1sja!2sjp" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+</body>
+</html>
